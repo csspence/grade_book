@@ -12,6 +12,21 @@ Tested values are all between 0 and 100. Theres is no need to check for
 negative values or values greater than 100.
 */
 
-function getGrade (s1, s2, s3) {
-  // Code here
+const getGrade = (s1, s2, s3) => {
+  const mean = (s1 + s2 + s3) / 3;
+
+  if(mean >= 90 && mean <= 100) {
+    return 'A';
+  }
+  if(mean >= 80 && mean <= 90) {
+    return 'B';
+  }
+  if(mean >= 70 && mean <= 80) {
+    return 'C';
+  }
+  if(mean >= 60 && mean <= 70) {
+    return 'D';
+  }
+
+  return 'F';
 }
